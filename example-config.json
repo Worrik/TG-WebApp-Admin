@@ -1,0 +1,55 @@
+{
+    "cards": [
+        {
+            "name": "Users",
+            "sql_file": "sql/users_count_query.sql",
+            "icon": "mdi-account-multiple",
+            "data_table": {
+                "pagination_sql_file": "sql/users_pagination_query.sql",
+                "headers": [
+                    {
+                        "text": "ID",
+                        "value": "id",
+                        "sortable": true
+                    },
+                    {
+                        "text": "Subscribed",
+                        "value": "subscribed",
+                        "sortable": true
+                    },
+                    {
+                        "text": "Banned",
+                        "value": "banned"
+                    },
+                    {
+                        "text": "Date joined",
+                        "value": "date",
+                        "sortable": true
+                    }
+                ],
+                "default_sort_column": "id"
+            }
+        },
+        {
+            "name": "Messages",
+            "sql_file": "sql/messages_count_query.sql",
+            "icon": "mdi-message-text-outline"
+        }
+    ],
+    "charts": [
+        {
+            "name": "All messages",
+            "sql_file": "sql/messages_statistics_query.sql",
+            "chart_type": "area",
+            "options_xaxis_type": "datetime",
+            "dataLabels": false
+        },
+        {
+            "name": "Groups",
+            "sql_file": "sql/group_messages_count.sql",
+            "chart_type": "bar",
+            "options_xaxis_type": "category",
+            "dataLabels": true
+        }
+    ]
+}

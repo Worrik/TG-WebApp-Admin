@@ -2,14 +2,11 @@ from pydantic import BaseModel
 from typing import List, Optional
 
 
-class Auth(BaseModel):
-    initData: str
-
-
 class Card(BaseModel):
     name: str
     value: int
     icon: str
+    has_data_table: Optional[bool] = False
 
 
 class Axis(BaseModel):
@@ -38,7 +35,7 @@ class Chart(BaseModel):
     series: List[Serie]
 
 
-class Analytics(BaseModel):
+class Analitics(BaseModel):
     cards: List[Card]
     charts: List[Chart]
 

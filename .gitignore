@@ -1,8 +1,8 @@
 # Your own sql queries
 sql/
 
-# Analytics config
-analytics.ini
+# Config
+config.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
